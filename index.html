@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wireless Security Demonstrator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="watermark"> soumyadip dhar  •wireless security demonstrator</div>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="logo">
+            <span>G</span> Wireless Security
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#learn">Learn</a>
+            <a href="#demo">Security Demo</a>
+            <a href="#safety">Safety</a>
+            <a href="#glossary">glossary</a>
+        </nav>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+
+        <div class="hero-text">
+
+            <p class="small-title">
+                GOOGLE • EDU-REVOLUTION PROJECT
+            </p>
+
+            <h1>
+                Wireless Security
+                <br>
+                <span>Demonstrator</span>
+            </h1>
+
+            <p class="intro">
+                Learn the basics of wireless security through a
+                safe, simple and interactive educational website.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#demo" class="main-btn">
+                    Explore Demo →
+                </a>
+
+                <a href="#learn" class="second-btn">
+                    Learn More
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- SECURITY VISUAL -->
+        <div class="security-visual">
+
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+
+            <div class="shield">
+                🛡️
+            </div>
+
+            <div class="secure-text">
+                ● EDUCATIONAL MODE
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- LEARNING SECTION -->
+    <section id="learn" class="section">
+
+        <p class="section-label">
+            01 / CORE CONCEPTS
+        </p>
+
+        <h2>
+            Understand Wireless Security
+        </h2>
+
+        <p class="section-intro">
+            Wireless security helps protect Wi-Fi networks and
+            connected devices from unauthorized access and common
+            security risks.
+        </p>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-number">01</div>
+
+                <div class="icon">
+                    🔐
+                </div>
+
+                <h3>
+                    Strong Authentication
+                </h3>
+
+                <p>
+                    Use a strong and unique Wi-Fi password and
+                    appropriate modern security settings.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-number">02</div>
+
+                <div class="icon">
+                    ⚙️
+                </div>
+
+                <h3>
+                    Updated Devices
+                </h3>
+
+                <p>
+                    Keep routers, computers and mobile devices
+                    updated with the latest security fixes.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-number">03</div>
+
+                <div class="icon">
+                    👁️
+                </div>
+
+                <h3>
+                    Network Awareness
+                </h3>
+
+                <p>
+                    Be careful when connecting to unfamiliar
+                    wireless networks.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SECURITY DEMO -->
+    <section id="demo" class="demo-section">
+
+        <div class="demo-info">
+
+            <p class="section-label">
+                02 / INTERACTIVE DEMO
+            </p>
+
+            <h2>
+                Wireless Network
+                <br>
+                <span>Security Checker</span>
+            </h2>
+
+            <p>
+                Select a simulated wireless network and check
+                its educational security status.
+            </p>
+
+            <div class="safe-box">
+                ✓ Safe Simulation
+                <br>
+                No real network scanning is performed.
+            </div>
+
+        </div>
+
+
+        <div class="checker">
+
+            <div class="checker-header">
+                <span>NETWORK CHECK</span>
+                <span class="simulation">
+                    ● SIMULATION
+                </span>
+            </div>
+
+
+            <label>
+                SELECT A SIMULATED NETWORK
+            </label>
+
+
+            <select id="network">
+
+                <option value="secure">
+                    Campus-WiFi • Protected
+                </option>
+
+                <option value="medium">
+                    Cafe-WiFi • Needs Review
+                </option>
+
+                <option value="open">
+                    Public-WiFi • Open
+                </option>
+
+            </select>
+
+
+            <button id="checkButton">
+                Analyze Security
+            </button>
+
+
+            <div id="result" class="result">
+
+                <div class="result-dot"></div>
+
+                <div>
+                    <strong>
+                        Ready to check
+                    </strong>
+
+                    <small>
+                        Select a network and analyze it.
+                    </small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- PASSWORD STRENGTH DEMO -->
+<section class="section" id="password">
+
+    <h2>Password Strength Demo</h2>
+    <p>Enter a sample password to check its strength.</p>
+
+    <div class="password-box">
+
+        <input
+            type="password"
+            id="passwordInput"
+            placeholder="Enter sample password"
+        >
+
+        <button onclick="checkPassword()">
+            Check Strength
+        </button>
+
+        <div id="passwordResult"></div>
+
+    </div>
+
+</section>
+<!-- WIRELESS SECURITY QUIZ -->
+<section class="section" id="quiz">
+   <h2>Wireless Security Quiz</h2>
+    <p>Test your basic knowledge of wireless security.</p>
+    <div class="quiz-box">
+<h3>1. Which is a safer Wi-Fi security option?</h3>
+
+<button onclick="quizAnswer(1, true)">WPA2/WPA3</button>
+<button onclick="quizAnswer(1, false)">Open Wi-Fi</button>
+<button onclick="quizAnswer(1, false)">No Password</button>
+
+<hr>
+
+<h3>2. What makes a password stronger?</h3>
+
+<button onclick="quizAnswer(2, true)">Long and unique</button>
+<button onclick="quizAnswer(2, false)">Short and simple</button>
+<button onclick="quizAnswer(2, false)">Same password everywhere</button>
+
+<hr>
+
+<h3>3. What should you avoid on unknown public Wi-Fi?</h3>
+
+<button onclick="quizAnswer(3, true)">Sharing sensitive information</button>
+<button onclick="quizAnswer(3, false)">Reading general information</button>
+<button onclick="quizAnswer(3, false)">Checking the network name</button>
+
+<hr>
+
+<h3>4. What is an SSID?</h3>
+
+<button onclick="quizAnswer(4, true)">Wi-Fi network name</button>
+<button onclick="quizAnswer(4, false)">A type of password</button>
+<button onclick="quizAnswer(4, false)">A web browser</button>
+
+<hr>
+
+<h3>5. Why are security updates important?</h3>
+
+<button onclick="quizAnswer(5, true)">They help improve security</button>
+<button onclick="quizAnswer(5, false)">They remove Wi-Fi</button>
+<button onclick="quizAnswer(5, false)">They make passwords unnecessary</button>
+
+<p id="quizResult"></p>
+
+ </div>
+
+</section>
+<!-- THREAT AWARENESS -->
+<section class="section" id="threats">
+
+    <p class="section-label">04 / THREAT AWARENESS</p>
+
+    <h2>Know the Risks. Stay Protected.</h2>
+
+    <div class="threat-grid">
+
+        <div class="threat-card">
+            <h3>⚠️ Open Wi-Fi</h3>
+            <p>
+                Open networks may not provide strong protection.
+                Avoid sharing sensitive information on unknown networks.
+            </p>
+        </div>
+
+        <div class="threat-card">
+            <h3>📡 Fake Hotspot</h3>
+            <p>
+                Unknown hotspots can be misleading.
+                Check the network name before connecting.
+            </p>
+        </div>
+
+        <div class="threat-card">
+            <h3>🔑 Weak Password</h3>
+            <p>
+                Weak passwords are easier to guess.
+                Use long and unique passwords for better security.
+            </p>
+        </div>
+
+        <div class="threat-card">
+            <h3>🔄 Outdated Security</h3>
+            <p>
+                Keeping devices and network equipment updated
+                helps improve security.
+            </p>
+        </div>
+
+    </div>
+<!-- WIRELESS SECURITY GLOSSARY -->
+<section class="section" id="glossary">
+
+    <p class="section-label">05 / GLOSSARY</p>
+
+    <h2>Wireless Security Glossary</h2>
+    <p>Understand common wireless security terms.</p>
+
+    <div class="glossary-grid">
+
+        <div class="glossary-card">
+            <h3>WPA2</h3>
+            <p>A Wi-Fi security standard that uses encryption to help protect wireless networks.</p>
+        </div>
+
+        <div class="glossary-card">
+            <h3>WPA3</h3>
+            <p>A newer Wi-Fi security standard designed to provide stronger protection.</p>
+        </div>
+
+        <div class="glossary-card">
+            <h3>SSID</h3>
+            <p>The name used to identify a Wi-Fi network.</p>
+        </div>
+
+        <div class="glossary-card">
+            <h3>Encryption</h3>
+            <p>A method of protecting information by converting it into a protected form.</p>
+        </div>
+
+    </div>
+
+</section>
+</section>
+    <!-- SAFETY SECTION -->
+    <section id="safety" class="section safety">
+
+        <p class="section-label">
+            03 / SAFETY CHECKLIST
+        </p>
+
+        <h2>
+            Smart Habits. Safer Connections.
+        </h2>
+
+
+        <div class="checklist">
+
+            <div>
+                <span>✓</span>
+                Use a strong and unique Wi-Fi password.
+            </div>
+
+            <div>
+                <span>✓</span>
+                Prefer modern Wi-Fi security such as WPA2/WPA3.
+            </div>
+
+            <div>
+                <span>✓</span>
+                Keep your router and devices updated.
+            </div>
+
+            <div>
+                <span>✓</span>
+                Avoid sensitive activities on unknown networks.
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div>
+            <strong>
+                Google – Wireless Security Demonstrator
+            </strong>
+        </div>
+
+        <div>
+            CSE111 • Orientation of Computing • EDU-Revolution
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
